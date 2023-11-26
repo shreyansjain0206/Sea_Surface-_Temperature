@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sst_styles.css">
+    <title>Regression Analysis: Sea Surface Temperature</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Regression Analysis: Sea Surface Temperature</h1>
+    </header>
+
+    <section id="obj">
+<h2>Objective</h2>
+<p>Our objective was to gain insights into the factors influencing sea surface temperature. To achieve this, we employed a Linear Regression model, utilizing a dataset containing various environmental variables.</p>
+
+           </section>
+
+<section id="reas">
+<h2>Reasons for Employing Regression:</h2>
+<h1>Prediction of Sea Surface Temperature:</h1>
+<p>Our regression model enables the prediction of sea surface temperature based on the provided environmental variables. This has practical applications for forecasting temperatures on future dates.</p>
+<h1>Identification of Significant Predictors:</h1>
+<p>By analyzing the regression coefficients, we can identify which environmental variables have a significant impact on sea surface temperature. This knowledge helps discern the key factors influencing temperature variations.</p>
+<h1>Model Interpretability:</h1>
+<p>The coefficients in the linear regression model provide insights into the strength and direction of influence of each predictor on sea surface temperature. This enhances our understanding of the relationships between different environmental factors and temperature.</p>
+<h1>Understanding Patterns and Trends:</h1>
+<p>Regression analysis allows us to uncover patterns and trends in the data. We explored how changes in zonal winds, meridional winds, and other variables correlate with changes in sea surface temperature.</p>
+
+
+
+           </section>
+
+<section id="visl">
+<h2>Visualization:</h2>
+<p>To aid in interpretation, we created a scatter plot comparing the actual sea surface temperatures with the predicted values from our regression model. This plot visually represents how well our model aligns with the observed data.</p>
+<img src="regressiongraph.png">
+
+           </section>
+
+
+
+
+    
+
+</body>
+
+</html>

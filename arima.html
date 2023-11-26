@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #87CEEB; /* Sky Blue */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4682B4; /* Steel Blue */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #FFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #description, #model-performance, #forecast {
+            margin-top: 40px;
+        }
+
+        #graph img, #forecast img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #statistics pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 8px;
+            overflow: auto;
+        }
+
+        #statistics pre::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        #statistics pre::-webkit-scrollbar-thumb {
+            background-color: #4682B4; /* Steel Blue */
+            border-radius: 4px;
+        }
+
+        body, h2, p, pre {
+            text-align: justify;
+        }
+
+        footer {
+            background-color: #4682B4; /* Steel Blue */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    
+    <title>ARIMA Model Results</title>
+</head>
+<body>
+    <header>
+        <h1>ARIMA Model Results</h1>
+    </header>
+
+    <section id="arima-results">
+        <h2>Overview</h2>
+        <p>We conducted a time series analysis on sea surface temperature data using the ARIMA (AutoRegressive Integrated Moving Average) model. The analysis included data preparation, visualization, model training, and evaluation.</p>
+    </section>
+
+    <section id="arima-visual">
+        <h2>Data Visualization</h2>
+        <p>A plot was generated to visualize the trends in air and sea surface temperatures over time. The graph illustrates the variations in both temperatures, offering an initial insight into the dataset.</p>
+        <img src="arima-forecast.png">
+    </section>
+
+    <section id="autocorr">
+        <h2>Auto Correlation Analysis</h2>
+        <p>Autocorrelation Function (ACF) and Partial Autocorrelation Function (PACF) plots were employed to understand the autocorrelation structure of the sea surface temperature data. These plots aid in determining the appropriate parameters for the ARIMA model. The dataset was split into training (80%) and test (20%) sets. The model was then fitted to the training data.</p>
+    </section>
+
+    <section id="pred">
+        <h2>Prediction And Evaluation</h2>
+        <p>The ARIMA model was used to make predictions on the test set. The Mean Squared Error (MSE) was calculated as a measure of prediction accuracy.</p>
+        <p><strong>Mean Squared Error: 0.4631620752313326</strong></p>
+        <p>A lower MSE indicates better performance; however, it's crucial to consider domain knowledge and compare the results with alternative models for a comprehensive assessment.</p>
+    </section>
+
+    <section id="conc">
+        <h2>Conclusion</h2>
+        <p>In conclusion, our time series analysis provides insights into the sea surface temperature trends. The ARIMA model, with the chosen parameters, demonstrates a certain level of predictive accuracy, as indicated by the MSE. Further refinement and comparison with alternative models may be explored for a more robust analysis.</p>
+    </section>
+</body>
+</html>

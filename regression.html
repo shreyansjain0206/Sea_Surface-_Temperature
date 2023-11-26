@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #87CEEB; /* Sky Blue */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4682B4; /* Steel Blue */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #FFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #obj, #reas, #visl, #modeleval {
+            margin-top: 40px;
+        }
+
+        #graph img, #forecast img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #statistics pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 8px;
+            overflow: auto;
+        }
+
+        #statistics pre::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        #statistics pre::-webkit-scrollbar-thumb {
+            background-color: #4682B4; /* Steel Blue */
+            border-radius: 4px;
+        }
+
+        body, h2, p, pre {
+            text-align: justify;
+        }
+
+        footer {
+            background-color: #4682B4; /* Steel Blue */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <title>Regression Analysis: Sea Surface Temperature</title>
+</head>
+<body>
+
+    <header>
+        <h1>Regression Analysis: Sea Surface Temperature</h1>
+    </header>
+
+    <section id="obj">
+        <h2>Objective</h2>
+        <p>Our objective was to gain insights into the factors influencing sea surface temperature. To achieve this, we employed a Linear Regression model, utilizing a dataset containing various environmental variables.</p>
+    </section>
+
+    <section id="reas">
+        <h1>Prediction of Sea Surface Temperature:</h1>
+        <p>Our regression model enables the prediction of sea surface temperature based on the provided environmental variables. This has practical applications for forecasting temperatures on future dates.</p>
+        <h1>Identification of Significant Predictors:</h1>
+        <p>By analyzing the regression coefficients, we can identify which environmental variables have a significant impact on sea surface temperature. This knowledge helps discern the key factors influencing temperature variations.</p>
+        <h1>Model Interpretability:</h1>
+        <p>The coefficients in the linear regression model provide insights into the strength and direction of influence of each predictor on sea surface temperature. This enhances our understanding of the relationships between different environmental factors and temperature.</p>
+        <h1>Understanding Patterns and Trends:</h1>
+        <p>Regression analysis allows us to uncover patterns and trends in the data. We explored how changes in zonal winds, meridional winds, and other variables correlate with changes in sea surface temperature.</p>
+    </section>
+
+    <section id="visl">
+        <h2>Visualization:</h2>
+        <p>To aid in interpretation, we created a scatter plot comparing the actual sea surface temperatures with the predicted values from our regression model. This plot visually represents how well our model aligns with the observed data.</p>
+        <img src="regressiongraph.png">
+    </section>
+
+    <section id="modeleval">
+        <h2>Model Evaluation</h2>
+        <p>The Mean Squared Error (MSE) for the linear regression model is approximately 0.3156. The MSE is a measure of the average squared differences between the actual and predicted values. In this context, a lower MSE indicates a better fit of the model to the data.</p>
+    </section>
+
+</body>
+</html>

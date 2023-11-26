@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #87CEEB; /* Sky Blue */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4682B4; /* Steel Blue */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #FFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #description, #model-performance, #forecast {
+            margin-top: 40px;
+        }
+
+        #graph img, #forecast img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #statistics pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 8px;
+            overflow: auto;
+        }
+
+        #statistics pre::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        #statistics pre::-webkit-scrollbar-thumb {
+            background-color: #4682B4; /* Steel Blue */
+            border-radius: 4px;
+        }
+
+        body, h2, p, pre {
+            text-align: justify;
+        }
+
+        footer {
+            background-color: #4682B4; /* Steel Blue */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <title>Sea Surface Temperature Prediction</title>
+</head>
+<body>
+
+    <header>
+        <h1>Sea Surface Temperature Prediction with LSTM-based Neural Network</h1>
+    </header>
+
+    <section id="overview">
+        <h2>Overview</h2>
+        <p>In this project, we leveraged Long Short-Term Memory (LSTM), a type of recurrent neural network, to understand and forecast the temporal dynamics of sea surface temperatures. Below, you'll find an in-depth analysis of the model's architecture, performance metrics, and a comparison with traditional models.</p>
+    </section>
+
+    <section id="model-architecture">
+        <h2>Model Architecture</h2>
+        <h1>Advantages of LSTM-based Neural Network</h1>
+        <p>1. Sequential Learning: LSTMs capture sequential patterns, allowing the model to understand and predict the temporal dynamics of sea surface temperature.</p>
+        <p>2. Variable-Length Sequences: LSTMs handle variable-length time series data, accommodating the varying time spans in sea surface temperature patterns.</p>
+        <p>3. Feature Engineering: The model automatically learns relevant features from input sequences (e.g., Zonal Winds, Meridional Winds, Humidity), reducing the need for manual feature engineering.</p>
+        <p>4. Scalability: LSTM architecture scales well with a large amount of historical data, enabling the model to capture complex and evolving patterns in sea surface temperature.</p>
+        <p>5. Interpretability: Insights into temporal patterns and their impact on sea surface temperature can be gained through the examination of the sequence of LSTM states.</p>
+        <h1>Disadvantages</h1>
+        <p>1. Computational Complexity: Training LSTM models can be computationally expensive, especially with a large number of epochs and complex architectures.</p>
+        <p>2. Hyperparameter Tuning: The model requires careful tuning of hyperparameters for optimal performance.</p>
+        <p>3. Limited Interpretability: Interpreting the exact meaning of learned features can be challenging, hindering direct insights into physical processes.</p>
+
+        <h2>Why Better Than Most</h2>
+        <p>1. Temporal Dynamics: LSTMs excel in capturing long-term dependencies in sea surface temperature data, providing a better understanding of gradual changes and trends.</p>
+        <p>2. Flexibility: The model can effectively handle various input features, adapting to changing patterns and offering versatility in modeling complex environmental interactions.</p>
+        <p>3. Feature Learning: By automatically learning relevant features, the LSTM model minimizes the need for explicit feature engineering, especially in dynamic oceanic systems.</p>
+        <p>4. Performance Metrics: The model achieves high-performance metrics, such as low Mean Squared Error (MSE) and high R², indicating superior predictive capabilities compared to traditional models.</p>
+        <p>5. Scalability: The LSTM model is designed to scale well with a large dataset, accommodating the diverse and evolving nature of sea surface temperature patterns.</p>
+    </section>
+
+    <section id="model-results">
+        <img src="lstm-graph.jpg">
+        <h2>Model Results</h2>
+        <img src="lstm-corr.png">
+        <h1>Model 1</h1>
+        <p>Epoch: 60</p>
+        <p>Learning Rate: Adam standard 0.0001</p>
+        <p>RMSE Error: 0.48</p>
+        <p>MSE Error: 0.23</p>
+        <p>MAE: 0.37</p>
+        <p>R-squared Score: 0.9</p>
+        <p>MSLE: 0.00028</p>
+        <p>Explained Variance Score: 0.9</p>
+        <p>Max Error: 7.48</p>
+        <h2>Model 2</h2>
+        <p>Epoch: 50</p>
+        <p>Learning Rate: Same as Model 1</p>
+        <p>MSE: 0.577</p>
+        <p>RMSE: 0.75</p>
+        <p>MAE: 0.61</p>
+        <p>R-squared Score: 0.75</p>
+        <p>MSLE: 0.00071</p>
+        <p>Explained Variance Score: 0.836</p>
+        <p>Max Error: 6.0181</p>
+        <h1>Model 3</h1>
+        <p>Epoch: 60</p>
+        <p>Learning Rate: 0.01</p>
+        <p>MSE: 0.577</p>
+        <p>RMSE: 0.75</p>
+        <p>MAE: 0.61</p>
+        <p>R-squared Score: 0.75</p>
+        <p>MSLE: 0.00071</p>
+        <p>Explained Variance Score: 0.836</p>
+        <p>Max Error: 6.0181</p>
+    </section>
+
+    <section id="performance-evaluation">
+        <h2>Performance Evaluation</h2>
+        <p>Model 1 demonstrates superior performance compared to Model 2 based on multiple evaluation metrics. It showcases lower error rates across MSE, RMSE, and MAE, indicating higher predictive accuracy and precision. Moreover, Model 1 exhibits lower MSLE and Max Error, emphasizing its capability in minimizing prediction discrepancies. Although Model 2 slightly edges in Explained Variance Score, Model 1 surpasses with a significantly higher R-squared score, indicating a better fit and higher variance explained by the model. Overall, Model 1 consistently outperforms Model 2 across a spectrum of metrics, portraying its robustness and accuracy in predictive modeling tasks.</p>
+    </section>
+
+</body>
+</html>

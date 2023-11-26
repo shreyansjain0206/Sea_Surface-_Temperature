@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #87CEEB; /* Sky Blue */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4682B4; /* Steel Blue */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #FFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #description, #model-performance, #forecast {
+            margin-top: 40px;
+        }
+
+        #graph img, #forecast img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #statistics pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 8px;
+            overflow: auto;
+        }
+
+        #statistics pre::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        #statistics pre::-webkit-scrollbar-thumb {
+            background-color: #4682B4; /* Steel Blue */
+            border-radius: 4px;
+        }
+
+        body, h2, p, pre {
+            text-align: justify;
+        }
+
+        footer {
+            background-color: #4682B4; /* Steel Blue */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <title>Sea Surface Temperature Project</title>
+</head>
+<body>
+    <header>
+        <h1>Sea Surface Temperature Prediction Using Machine Learning Models</h1>
+    </header>
+
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>Sea surface temperature prediction holds utmost importance in numerous domains, such as marine ecology, fisheries management, and climate change research. Real-time forecasts often rely on the laws of fluid dynamics and thermodynamics, making them more suitable for predicting temperatures over larger areas rather than pinpoint locations.</p>
+
+        <p>Our research project focuses on the application of Deep Learning Neural Networks, specifically Long Short-Term Memory (LSTM) networks, combined with numerical estimators like confusion matrices. We conducted extensive analyses at various geographical coordinates and time durations, including daily, weekly, and monthly intervals.</p>
+
+        <p>The primary goal was to enhance forecasting accuracy by transitioning from traditional neural networks to advanced deep learning networks. We specifically anticipated significant improvements with LSTM models, known for capturing long-term dependencies and extracting intricate patterns from data.</p>
+
+        <p>Additionally, our study includes a comparative analysis with the Autoregressive Integrated Moving Average (ARIMA) model, incorporating an external validation input. We hypothesized that the LSTM model would outperform ARIMA due to its ability to memorize long-term dependencies and discern complex features and patterns.</p>
+    </section>
+ 
+    <section id="dataset">
+        <h2>Dataset Description</h2>
+        <p>The dataset used in our Sea Surface Temperature (SST) project is a comprehensive collection of observational data spanning multiple years. It includes key meteorological and oceanographic parameters recorded at various geographical coordinates. Here's a brief overview of the dataset columns:</p>
+
+        <ul>
+            <li><strong>Observation:</strong> Unique identifier for each data entry.</li>
+            <li><strong>Year, Month, Day:</strong> Timestamp information specifying when the observation was recorded.</li>
+            <li><strong>Date:</strong> A combined representation of the Year, Month, and Day for convenience.</li>
+            <li><strong>Latitude, Longitude:</strong> Geographical coordinates of the observation point.</li>
+            <li><strong>Zonal Winds, Meridional Winds:</strong> Wind components along the east-west and north-south directions, respectively.</li>
+            <li><strong>Humidity:</strong> Humidity level recorded at the observation point.</li>
+            <li><strong>Air Temp:</strong> Air temperature at the observation point.</li>
+            <li><strong>Sea Surface Temp:</strong> The target variable representing the sea surface temperature.</li>
+        </ul>
+
+        <p>The dataset provides a rich source of information for understanding the dynamics of sea surface temperature and its relationship with various meteorological factors. Each entry represents a specific point in time and space, contributing to our research into accurate SST predictions using machine learning models.</p>
+    </section>
+
+    <section id="results">
+        <h2>Results</h2>
+        <p>Explore the results of our machine learning models, including:</p>
+        <ul>
+            <li><a href="sarima.html">SARIMA Model</a> - Insights into sea surface temperature predictions using Seasonal Autoregressive Integrated Moving Average.</li>
+            <li><a href="arima.html">ARIMA Model</a> - Analysis of historical sea surface temperature data and predictions using Autoregressive Integrated Moving Average.</li>
+            <li><a href="lstm.html">LSTM Model</a> - Application of Long Short-Term Memory networks for capturing long-term dependencies and improving accuracy.</li>
+            <li><a href="regression.html">Regression Model</a> - Examination of sea surface temperature relationships using linear and quantile regression.</li>
+            <li><a href="classification.html">Classification Model</a> - Forecasting sea surface temperatures based on climatic and atmospheric conditions using Random Forest Classifier, Naive Bayes, and Decision Trees.</li>
+        </ul>
+    </section>
+</body>
+</html>
